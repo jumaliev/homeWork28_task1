@@ -1,5 +1,3 @@
-package kg.attractor.java.task1;
-
 import java.util.List;
 
 // код можно менять только в особо отмеченном месте этого файла,
