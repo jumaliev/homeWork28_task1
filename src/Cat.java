@@ -1,3 +1,5 @@
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
@@ -57,6 +59,10 @@ final class Cat {
     }
 
     /*********/
+
+    public static void sortByAge(List<Cat> cats) {
+        Collections.sort(cats, (cat1, cat2) -> cat1.getAge() - cat2.getAge());
+    }
 
     // Ваш код может находится здесь
     // остальную часть этого файла вы менять не можете
