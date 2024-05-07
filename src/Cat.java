@@ -59,6 +59,9 @@ final class Cat {
     }
 
     /*********/
+    public static void sortByBreed(List<Cat> cats) {
+        Collections.sort(cats, (cat1, cat2) -> cat1.getBreed().compareTo(cat2.getBreed()));
+    }
     public static void sortByName(List<Cat> cats) {
         Collections.sort(cats, (cat1, cat2) -> cat1.getName().compareTo(cat2.getName()));
     }

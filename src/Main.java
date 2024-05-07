@@ -8,6 +8,9 @@ public class Main {
         Printer.print(cats);
         Cat.sortByName(cats);
         Printer.print(cats);
+        Cat.sortByBreed(cats);
+        Printer.print(cats);
+
 
         // А сюда добавьте код, который будет сортировать коллекцию котов
         // используйте лямбда-выражения и ссылки на методы
