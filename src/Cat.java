@@ -2,11 +2,6 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-// код можно менять только в особо отмеченном месте этого файла,
-// так же возможно вам понадобится добавить что-то в 
-// блок import и поменять имя пакета
-// в остальных местах этого файла код менять не разрешается.
-
 final class Cat {
     private static final Random r = new Random();
     private static final List<String> names = List.of("Peach", "Ginger", "Toby", "Seth", "Tibbles", "Tabby", "Poppy",
@@ -24,8 +19,6 @@ final class Cat {
     }
 
     public static final List<Cat> makeCats(int amount) {
-        // это называется конвейерная обработка.
-        // будем проходить на одном из занятий
         return Stream.generate(Cat::new)
                 .limit(amount)
                 .collect(Collectors.toList());
@@ -55,7 +48,6 @@ final class Cat {
         SPHINX, BRITAIN, SCOTTISH, VULGARIS, ORIENTAL
     }
 
-    /*********/
     public static void removeCatNameLengthIs5(List<Cat> cats) {
         System.out.println("""
                          Удаление по длине имени: \s
@@ -63,6 +55,7 @@ final class Cat {
                 """);
         cats.removeIf(cat -> cat.getName().length() == 5);
     }
+
     public static void removeCatCertainColor(List<Cat> cats, Color color) {
         System.out.println("""
                          Удаление по цвету \s
@@ -70,6 +63,7 @@ final class Cat {
                 """);
         cats.removeIf(cat -> cat.getColor().equals(color));
     }
+
     public static void sortByBreed(List<Cat> cats) {
         System.out.println("""
                          Сортировка по породе: \s
@@ -77,6 +71,7 @@ final class Cat {
                 """);
         Collections.sort(cats, (cat1, cat2) -> cat1.getBreed().compareTo(cat2.getBreed()));
     }
+
     public static void sortByName(List<Cat> cats) {
         System.out.println("""
                          Сортировка по имени: \s
@@ -92,9 +87,4 @@ final class Cat {
                 """);
         Collections.sort(cats, (cat1, cat2) -> cat1.getAge() - cat2.getAge());
     }
-
-    // Ваш код может находится здесь
-    // остальную часть этого файла вы менять не можете
-
-    /*********/
 }
