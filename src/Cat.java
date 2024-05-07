@@ -59,6 +59,9 @@ final class Cat {
     }
 
     /*********/
+    public static void sortByName(List<Cat> cats) {
+        Collections.sort(cats, (cat1, cat2) -> cat1.getName().compareTo(cat2.getName()));
+    }
 
     public static void sortByAge(List<Cat> cats) {
         Collections.sort(cats, (cat1, cat2) -> cat1.getAge() - cat2.getAge());
