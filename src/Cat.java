@@ -56,19 +56,40 @@ final class Cat {
     }
 
     /*********/
-    public static List<Cat> removeCatCertainColor(List<Cat> cats, Color color) {
-        List<Cat> cats1 = cats;
-        cats1.removeIf(cat -> cat.getColor().equals(color));
-        return cats1;
+    public static void removeCatNameLengthIs5(List<Cat> cats) {
+        System.out.println("""
+                         Удаление по длине имени: \s
+                ============================================
+                """);
+        cats.removeIf(cat -> cat.getName().length() == 5);
+    }
+    public static void removeCatCertainColor(List<Cat> cats, Color color) {
+        System.out.println("""
+                         Удаление по цвету \s
+                ============================================
+                """);
+        cats.removeIf(cat -> cat.getColor().equals(color));
     }
     public static void sortByBreed(List<Cat> cats) {
+        System.out.println("""
+                         Сортировка по породе: \s
+                ============================================
+                """);
         Collections.sort(cats, (cat1, cat2) -> cat1.getBreed().compareTo(cat2.getBreed()));
     }
     public static void sortByName(List<Cat> cats) {
+        System.out.println("""
+                         Сортировка по имени: \s
+                ============================================
+                """);
         Collections.sort(cats, (cat1, cat2) -> cat1.getName().compareTo(cat2.getName()));
     }
 
     public static void sortByAge(List<Cat> cats) {
+        System.out.println("""
+                         Сортировка по возрасту: \s
+                ============================================
+                """);
         Collections.sort(cats, (cat1, cat2) -> cat1.getAge() - cat2.getAge());
     }
 
