@@ -1,7 +1,4 @@
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -59,6 +56,11 @@ final class Cat {
     }
 
     /*********/
+    public static List<Cat> removeCatCertainColor(List<Cat> cats, Color color) {
+        List<Cat> cats1 = cats;
+        cats1.removeIf(cat -> cat.getColor().equals(color));
+        return cats1;
+    }
     public static void sortByBreed(List<Cat> cats) {
         Collections.sort(cats, (cat1, cat2) -> cat1.getBreed().compareTo(cat2.getBreed()));
     }

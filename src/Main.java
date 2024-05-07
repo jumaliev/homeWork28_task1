@@ -10,6 +10,7 @@ public class Main {
         Printer.print(cats);
         Cat.sortByBreed(cats);
         Printer.print(cats);
+        Printer.print(Cat.removeCatCertainColor(cats, Cat.Color.GINGER));
 
 
         // А сюда добавьте код, который будет сортировать коллекцию котов
